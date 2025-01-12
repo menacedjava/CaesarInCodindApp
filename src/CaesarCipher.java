@@ -18,6 +18,9 @@ import java.util.Scanner;
             public static String decrypt(String text, int shift) {
                 return encrypt(text, -shift);
             }
+            public static void main(String[] args) {
+
+            }
         }
 
 
