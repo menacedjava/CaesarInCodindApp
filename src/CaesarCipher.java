@@ -19,8 +19,33 @@ import java.util.Scanner;
                 return encrypt(text, -shift);
             }
             public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
 
+                System.out.println("Sezar shifrlash dasturi");
+                System.out.println("1. Matnni shifrlash");
+                System.out.println("2. Matnni deshifrlash");
+                System.out.print("Tanlovni kiriting (1 yoki 2): ");
+                int choice = scanner.nextInt();
+                scanner.nextLine();
+                System.out.print("Matnni kiriting: ");
+                String text = scanner.nextLine();
+
+                System.out.print("Kalitni kiriting (raqam): ");
+                int shift = scanner.nextInt();
+
+                if (choice == 1) {
+                    String encryptedText = encrypt(text, shift);
+                    System.out.println("Shifrlangan matn: " + encryptedText);
+                } else if (choice == 2) {
+                    String decryptedText = decrypt(text, shift);
+                    System.out.println("Deshifrlangan matn: " + decryptedText);
+                } else {
+                    System.out.println("Noto'g'ri tanlov!");
+                }
+
+                scanner.close();
             }
+
         }
 
 
