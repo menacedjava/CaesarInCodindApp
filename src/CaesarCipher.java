@@ -15,6 +15,9 @@ import java.util.Scanner;
                 }
                 return encrypted.toString();
             }
+            public static String decrypt(String text, int shift) {
+                return encrypt(text, -shift);
+            }
         }
 
 
